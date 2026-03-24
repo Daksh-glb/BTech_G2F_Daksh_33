@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+  
+    int arr[] = {12, 19, 45, 69, 98, 23}; 
+    int size = sizeof(arr) / sizeof(arr[0]); 
+    int even_count = 0;
+    int odd_count = 0;
+    int i;
+
+
+    for (i = 0; i < size; i++) {
+       
+        if (arr[i] % 2 == 0) {
+            even_count++;
+        } else {
+            odd_count++;
+        }
+    }
+
+  
+    printf("Original array elements: ");
+    for (i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\nTotal number of even elements: %d\n", even_count);
+    printf("Total number of odd elements: %d\n", odd_count);
+
+    return 0;
+}
